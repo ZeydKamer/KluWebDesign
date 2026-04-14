@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kırklareli Üniversitesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="tr" href="index.html">
+    <link rel="alternate" hreflang="en" href="index_en.html">
+    <link rel="alternate" hreflang="x-default" href="index.html">
+</head>
+<body>
+
+<div id="welcomePopup" class="klu-popup-overlay">
+    <div class="klu-popup-box">
+        <button class="klu-popup-close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+        <div class="klu-popup-content">
+            <div class="popup-top-logo">
+                <img src="https://rehber.klu.edu.tr/public/images/klu-logo2.png" alt="KLU Logo">
+            </div>
+            <div class="popup-image-rect">
+                <img src="https://www.klu.edu.tr/dosyalar/birimler/www/dosyalar/resimler/rektor/prof._dr._rengin_ak.jpeg" alt="Rektör Prof. Dr. Rengin AK">
+            </div>
+            <div class="popup-text">
+                <h3>DUYURU</h3>
+                <p>Değerli öğrencilerimiz,<br>2025-2026 Eğitim-Öğretim Yılı Bahar Yarıyılı ara sınavlarında (vizeler) hepinize üstün başarılar diliyorum.<br><br>Emeklerinizin karşılığını alacağınız, güzel bir sınav dönemi geçirmeniz temennisiyle...</p>
+                <span class="popup-signature">Prof. Dr. Rengin AK<br><small>Kırklareli Üniversitesi Rektörü</small></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="preloader">
+    <div class="loader-content">
+        <img src="https://www.klu.edu.tr/anadizin/icerikler/temalar/birimler/rektorluk_yeni/img/logo.png" alt="KLU Logo" class="loader-logo">
+        <div class="loader-bar"></div>
+        <p>Bilgeliğe Yolculuk...</p>
+    </div>
+</div>
+
+<div class="header-wrapper">
+    <header class="top-header">
+        <div class="top-container">
+            <div class="top-nav-far-left">
+                <a href="#">KLU-WIFI</a>
+                <a href="#">KLU E-POSTA</a>
+                <a href="#">Akademik Takvim</a>
+                <a href="#">Personel CV</a>
+            </div>
+            <div class="top-nav-right-group">
+                <div class="top-nav-left">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Ara...">
+                        <button class="search-btn" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <nav class="top-links">
+                        <a href="#">E-KLU</a>
+                        <a href="index_en.html" class="lang-selector">EN</a>
+                    </nav>
+                </div>
+                <div class="top-nav-right">
+                    <ul class="social-bar">
+                        <li><a href="#" class="icon-home"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a href="#" class="icon-theme" id="themeToggleBtn" onclick="toggleTheme(event)" title="Gece/Gündüz Modu"><i class="fa-solid fa-moon"></i></a></li>
+                        <li><a href="https://www.instagram.com/kirklar_uni/" class="icon-instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/krluni" class="icon-youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://x.com/kirklaruni" class="icon-x"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/kirklaruni39/" class="icon-facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://tr.linkedin.com/school/k%C4%B1rklareliuniversity/" class="icon-linkedin"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="main-header">
+        <div class="main-container">
+            <div class="logo">
+                <a href="index.html"><img src="https://www.klu.edu.tr/anadizin/icerikler/temalar/birimler/rektorluk_yeni/img/logo.png" alt="Kırklareli Üniversitesi"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="dropdown"><a href="#">Üniversitemiz <i class="fa-solid fa-chevron-down" style="font-size:8px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Genel Bilgiler</a></li>
+                            <li><a href="#">Yönetim</a></li>
+                            <li><a href="#">Misyon, Vizyon, Değerler</a></li>
+                            <li><a href="#">Rektörün Mesajı</a></li>
+                            <li><a href="#">İdari Bilimler</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Akademik <i class="fa-solid fa-chevron-down" style="font-size:8px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Enstitüler</a></li>
+                            <li><a href="#">Fakülteler</a></li>
+                            <li><a href="#">Meslek Yüksekokulları</a></li>
+                            <li><a href="#">Yabancı Diller Yüksekokulu</a></li>
+                            <li><a href="#">Devlet Konservatuvarı</a></li>
+                            <li><a href="#">Rektörlüğe Bağlı Birimler</a></li>
+                            <li><a href="#">Koordinatörlükler</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Öğrenci <i class="fa-solid fa-chevron-down" style="font-size:8px;"></i></a>
+                        <ul class="dropdown-menu mega-menu">
+                            <li><a href="#">Aday Öğrenci</a></li>
+                            <li><a href="#">Akademik Takvim</a></li>
+                            <li><a href="#">Barınma Destek Birimi</a></li>
+                            <li><a href="#">Bologna</a></li>
+                            <li><a href="#">Erasmus</a></li>
+                            <li><a href="#">Europass</a></li>
+                            <li><a href="#">Farabi</a></li>
+                            <li><a href="#">Kariyer Uygulama ve Araştırma Merkezi</a></li>
+                            <li><a href="#">Kütüphane ve Dökümasyon Daire Başkanlığı</a></li>
+                            <li><a href="#">Mezun Öğrenci</a></li>
+                            <li><a href="#">Mevlana Koordinatörlüğü</a></li>
+                            <li><a href="#">Öğrenci Bilgi Sistemi</a></li>
+                            <li><a href="#">Öğrenci İşleri Daire Başkanlığı</a></li>
+                            <li><a href="#">Öğrenci Kulüpleri</a></li>
+                            <li><a href="#">Sağlık Kültür ve Spor Daire Başkanlığı</a></li>
+                            <li><a href="#">Uluslararası Öğrenci Ofisi</a></li>
+                            <li><a href="#">Uzaktan Eğitim Uyg. ve Arş. Merkezi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Araştırma <i class="fa-solid fa-chevron-down" style="font-size:8px;"></i></a>
+                        <ul class="dropdown-menu mega-menu">
+                            <li><a href="#">Uygulama ve Araştırma Merkezleri</a></li>
+                            <li><a href="#">Gıda Arzı Güvenliği ve Dijitalleşme OUAM</a></li>
+                            <li><a href="#">Gıda Ar-Ge İnovasyon ve Girişimcilik UAM</a></li>
+                            <li><a href="#">Bilimsel Araştırma Projeleri Koordinatörlüğü</a></li>
+                            <li><a href="#">Proje Geliştirme ve Koordinasyon Ofisi</a></li>
+                            <li><a href="#">Teknoloji Transfer Ofisi</a></li>
+                            <li><a href="#">Bilimsel Dergiler</a></li>
+                            <li><a href="#">Laboratuvarlar</a></li>
+                            <li><a href="#">Teknokent</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">e-Hizmetler</a></li>
+                    <li class="dropdown"><a href="#">İletişim <i class="fa-solid fa-chevron-down" style="font-size:8px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Genel İletişim Bilgileri</a></li>
+                            <li><a href="#">Birim İletişim Bilgileri</a></li>
+                            <li><a href="#">Rektöre Mesaj Yazın</a></li>
+                            <li><a href="#">Klu Rehber</a></li>
+                            <li><a href="#">İstek ve Öneri</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-right-banner">
+                <img src="https://www.klu.edu.tr/anadizin/icerikler/temalar/birimler/rektorluk_yeni/img/banner.png" alt="KLU Banner">
+            </div>
+        </div>
+    </header>
+</div>
+
+<section class="hero-section">
+    <video autoplay loop muted playsinline class="hero-video" id="heroVideo">
+        <source src="https://www.pexels.com/tr-tr/download/video/20132268/" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <button class="video-toggle-btn" id="videoToggleBtn" onclick="toggleVideo()" title="Videoyu Durdur / Başlat">
+        <i class="fa-solid fa-pause" id="videoToggleIcon"></i>
+    </button>
+    <div class="hero-quick-access">
+        <div class="content-container">
+            <div class="quick-access-grid">
+                <a href="#" class="quick-item"><i class="fa-solid fa-laptop-code"></i><span>E-KLU (ÜBYS)</span></a>
+                <a href="#" class="quick-item"><i class="fa-solid fa-user-graduate"></i><span>Öğrenci İşleri</span></a>
+                <a href="#" class="quick-item"><i class="fa-solid fa-utensils"></i><span>Yemek Listesi</span></a>
+                <a href="#" class="quick-item"><i class="fa-solid fa-book-open"></i><span>Kütüphane</span></a>
+                <a href="#" class="quick-item"><i class="fa-solid fa-microscope"></i><span>Teknopark</span></a>
+                <a href="#" class="quick-item"><i class="fa-solid fa-address-book"></i><span>KLU Rehber</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news-events-section">
+    <div class="content-container">
+        <div class="news-top-row">
+            <div class="section-header-flex">
+                <div class="header-left">
+                    <h2 class="section-title">HABERLER</h2>
+                    <div class="header-arrows">
+                        <button class="nav-btn" onclick="moveSlider('left')"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="nav-btn" onclick="moveSlider('right')"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="view-all-btn btn-outline">Tüm Haberler</a>
+                </div>
+            </div>
+            <div class="news-grid-wrapper">
+                <div class="news-grid" id="newsSlider">
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>15 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Üniversitemizde "Geleceğin Mühendisleri" Paneli Gerçekleşti</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>12 MART 2026</span></div>
+                        <div class="news-card-content"><h3>TÜBİTAK Proje Hazırlama Eğitimi Başarıyla Tamamlandı</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>30 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Üniversitemizde Uluslararası Sıfır Atık Günü Etkinliği Düzenlendi</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>28 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Genç Yazılımcılar Uzay Yolunda TUA Astro Hackathon'da Buluştu</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>25 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Milli Sporcularımızdan Dünya Üniversiteler Arası Şampiyonada İlk Madalya</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>22 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Modern Kütüphane Kaynaklarına Erişim ve Araştırma Yöntemleri Semineri</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>20 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Mühendislik Fakültesi'nden Güneş Enerjisi Verimliliğini Artıran Yeni Yöntem</h3><div class="news-meta"></div></div>
+                    </a>
+                    <a href="#" class="news-image-card" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop');">
+                        <div class="card-overlay"></div>
+                        <div class="news-date-badge"><span>18 MART 2026</span></div>
+                        <div class="news-card-content"><h3>Sektör Liderleriyle Buluşma: KLU Kariyer Günleri Başlıyor</h3><div class="news-meta"></div></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="events-announcements-flex">
+            <div class="ea-column">
+                <div class="section-header-flex">
+                    <h2 class="section-title">ETKİNLİKLER</h2>
+                    <div class="header-right">
+                        <a href="#" class="view-all-btn btn-outline">Etkinlik Takvimi</a>
+                        <a href="#" class="view-all-btn btn-outline">Tüm Etkinlikler</a>
+                    </div>
+                </div>
+                <div class="ea-list">
+                    <a href="#" class="ea-item"><div class="ea-date-box event-date"><span class="day-month"><i class="fa-regular fa-calendar"></i> 17 NİS</span><span class="time"><i class="fa-regular fa-clock"></i> 09:00</span></div><div class="ea-item-year"><span>2026</span></div><div class="ea-content"><h4>6. Uluslararası Bankacılık Kongresi</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box event-date"><span class="day-month"><i class="fa-regular fa-calendar"></i> 9 NİS</span><span class="time"><i class="fa-regular fa-clock"></i> 09:00</span></div><div class="ea-item-year"><span>2026</span></div><div class="ea-content"><h4>Uluslararası Uzay Kongresi (IAC 2026)</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box event-date"><span class="day-month"><i class="fa-regular fa-calendar"></i> 28 MAR</span><span class="time"><i class="fa-regular fa-clock"></i> 14:00</span></div><div class="ea-item-year"><span>2026</span></div><div class="ea-content"><h4>Özel Gereksinimli Çocuklar İçin Temel Jimnastik Eğitimi</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box event-date"><span class="day-month"><i class="fa-regular fa-calendar"></i> 19 MAR</span><span class="time"><i class="fa-regular fa-clock"></i> 10:30</span></div><div class="ea-item-year"><span>2026</span></div><div class="ea-content"><h4>Yapay Zeka ve Geleceğin Meslekleri Zirvesi</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box event-date"><span class="day-month"><i class="fa-regular fa-calendar"></i> 11 OCA</span><span class="time"><i class="fa-regular fa-clock"></i> 13:00</span></div><div class="ea-item-year"><span>2026</span></div><div class="ea-content"><h4>Kariyer Günleri: Sektör Liderleriyle Buluşma</h4></div></a>
+                </div>
+            </div>
+            <div class="ea-column">
+                <div class="section-header-flex">
+                    <h2 class="section-title">DUYURULAR</h2>
+                    <div class="header-right">
+                        <a href="#" class="view-all-btn btn-outline">Tüm Duyurular</a>
+                    </div>
+                </div>
+                <div class="ea-list">
+                    <a href="#" class="ea-item"><div class="ea-date-box announcement-date"><span class="day-month">30 MAR</span><span class="year">2026</span></div><div class="ea-content"><h4>Üniversitemizden Dünya Otizm Farkındalık Günü'ne Özel Panel</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box announcement-date"><span class="day-month">30 MAR</span><span class="year">2026</span></div><div class="ea-content"><h4>Tekirdağ Namık Kemal Üniversitesi Ev Sahipliğinde Kariyer Fuarı</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box announcement-date"><span class="day-month">28 MAR</span><span class="year">2026</span></div><div class="ea-content"><h4>ROBOTRAK'26 Ulusal Robot Yarışması ve Teknoloji Zirvesi</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box announcement-date"><span class="day-month">25 MAR</span><span class="year">2026</span></div><div class="ea-content"><h4>Bahar Yarıyılı Ara Sınav (Vize) Mazeret Başvuruları Hakkında</h4></div></a>
+                    <a href="#" class="ea-item"><div class="ea-date-box announcement-date"><span class="day-month">21 MAR</span><span class="year">2026</span></div><div class="ea-content"><h4>Erasmus+ Öğrenim ve Staj Hareketliliği Yabancı Dil Sınavı Sonuçları</h4></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="campus-rnd-section">
+    <div class="content-container">
+        <div class="tab-content-wrapper" style="position: relative;">
+            <button class="gallery-next-btn" id="sectionNextBtn" onclick="switchToNextSection()" title="Ar-Ge Projelerine Geç">
+                <i class="fa-solid fa-arrow-right" id="sectionNextIcon"></i>
+            </button>
+            <div id="tab-campus" class="tab-pane active">
+                <div class="campus-split-layout">
+                    <div class="campus-gallery-column">
+                        <div class="gallery-wrapper">
+                            <div class="gallery-track" id="campusGallery">
+                                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" alt="Bahar Şenlikleri"><div class="gallery-caption"><h4>Bahar Şenlikleri</h4><p>Öğrencilerimizle festival</p></div></div>
+                                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=600&auto=format&fit=crop" alt="Merkez Kütüphane"><div class="gallery-caption"><h4>Merkez Kütüphane</h4><p>7/24 çalışma ortamı</p></div></div>
+                                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" alt="Laboratuvarlar"><div class="gallery-caption"><h4>Laboratuvarlar</h4><p>Geleceği şekillendiren projeler</p></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-rnd" class="tab-pane">
+                <div class="modern-projects-grid">
+                    <a href="proje-detay.html" class="modern-slice">
+                        <div class="slice-bg" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop');"></div>
+                        <div class="slice-content slice-blue">
+                            <span class="slice-badge">TÜBİTAK 1001</span>
+                            <h3>Yapay Zeka Destekli Akıllı Tarım</h3>
+                            <p>Mühendislik Fakültemizin geliştirdiği proje ile tarım arazilerinde rekolte tahmini tam otonom hale geliyor.</p>
+                        </div>
+                    </a>
+                    <a href="proje-detay.html" class="modern-slice">
+                        <div class="slice-bg" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop');"></div>
+                        <div class="slice-content slice-teal">
+                            <span class="slice-badge">AB Projesi</span>
+                            <h3>Yeni Nesil Rüzgar Türbinleri</h3>
+                            <p>AB Horizon destekli laboratuvarlarımızda rüzgar enerjisi verimliliğini %30 artıran kompozit malzemeler üretildi.</p>
+                        </div>
+                    </a>
+                    <a href="proje-detay.html" class="modern-slice">
+                        <div class="slice-bg" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop');"></div>
+                        <div class="slice-content slice-pink">
+                            <span class="slice-badge">Teknokent</span>
+                            <h3>Biyouyumlu İmplant Geliştirilmesi</h3>
+                            <p>KLU Teknokent bünyesindeki startup'ımız, yerli imkanlarla sinir sistemiyle entegre olan mikroçipler geliştiriyor.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="international-students-section">
+    <div class="content-container">
+        <div class="intl-layout">
+            <div class="intl-map-column" id="globe-container"></div>
+            <div class="intl-content-column" id="student-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 40px; backdrop-filter: blur(10px); min-height: 350px;">
+                <div id="active-student-content" style="text-align: center; transition: all 0.6s ease; opacity: 0;">
+                    <div class="flag-wrapper" style="margin-bottom: 25px;">
+                        <img id="active-student-flag" src="" alt="Bayrak" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #182956; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+                    </div>
+                    <h3 id="active-student-name" style="color: #ffffff; font-size: 24px; margin-bottom: 5px;"></h3>
+                    <p id="active-student-country" style="color: var(--orange); font-size: 16px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;"></p>
+                    <div class="testimonial-text" style="max-width: 400px; margin: 0 auto;">
+                        <p id="active-student-text" style="color: #e2e8f0; font-size: 15px; line-height: 1.8; font-style: italic;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rector-message-section">
+    <div class="content-container rector-message-container">
+        <div class="rector-image-wrapper">
+            <img src="https://www.klu.edu.tr/dosyalar/birimler/www/dosyalar/resimler/rektor/prof._dr._rengin_ak.jpeg" alt="KLU Rektörü">
+        </div>
+        <div class="rector-text-wrapper">
+            <p class="rector-quote">Kırklareli Üniversitesi'nde sadece geleceğe hazırlanmıyoruz.<br>Aynı zamanda aklın ve bilimin ışığında geleceği de hazırlıyoruz.</p>
+            <h3 class="rector-name">Prof. Dr. Rengin AK</h3>
+            <p class="rector-title">Kırklareli Üniversitesi Rektörü</p>
+        </div>
+    </div>
+</section>
+
+<section class="numbers-section">
+    <div class="numbers-container">
+        <div class="numbers-grid">
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-users"></i></div><div class="number-value">926</div><div class="number-label">Akademik Personel</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></div><div class="number-value">23.676</div><div class="number-label">Öğrenci Sayısı</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-pen-nib"></i></div><div class="number-value">7.793</div><div class="number-label">Makaleler</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-microscope"></i></div><div class="number-value">15</div><div class="number-label">Araştırma Merkezi</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-business-time"></i></div><div class="number-value">1.685</div><div class="number-label">Projeler</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-trophy"></i></div><div class="number-value">232</div><div class="number-label">Başarı ve Ödüller</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-flask"></i></div><div class="number-value">12</div><div class="number-label">Buluşlar</div></div>
+            <div class="number-item"><div class="icon-circle"><i class="fa-solid fa-file-signature"></i></div><div class="number-value">19.351</div><div class="number-label">Toplam Yayınlar</div></div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="https://www.klu.edu.tr/anadizin/icerikler/temalar/birimler/rektorluk_yeni/img/logo.png" alt="KLU Logo" class="footer-logo">
+            <p class="footer-desc">Kırklareli Üniversitesi, aklın ve bilimin ışığında geleceği hazırlayan yenilikçi bir devlet üniversitesidir.</p>
+            <ul class="contact-info">
+                <li><i class="fa-solid fa-location-dot"></i> Kayalı Kampüsü, Merkez / Kırklareli</li>
+                <li><i class="fa-solid fa-phone"></i> 444 40 39</li>
+                <li><i class="fa-solid fa-envelope"></i> bilgi@klu.edu.tr</li>
+                <li><i class="fa-solid fa-building-shield"></i> KEP: kirklareliuniversitesi@hs01.kep.tr</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+            <div class="title-underline-sm"></div>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Öğrenci Bilgi Sistemi (OBS)</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Elektronik Belge Yönetimi (EBYS)</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Akademik Takvim</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Merkez Kütüphane</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> Kalite Koordinatörlüğü</a></li>
+                <li><a href="#"><i class="fa-solid fa-angle-right"></i> KVKK Aydınlatma Metni</a></li>
+            </ul>
+        </div>
+        <div class="footer-col map-col">
+            <h2 class="footer-heading">Kampüse Ulaşım</h2>
+            <div class="title-underline-sm"></div>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.2951717804473!2d27.1332960765451!3d41.77884147124996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a0211111111111%3A0x1111111111111111!2sK%C4%B1rklareli%20%C3%9Cniversitesi%20Kayal%C4%B1%20Kamp%C3%BCs%C3%BC!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>© 2007 Kırklareli Üniversitesi. Tüm hakları saklıdır.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#">Kullanım Koşulları</a>
+                <a href="#">Bilgi Edinme</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-buttons">
+    <button id="scrollTopBtn" class="float-btn" onclick="scrollToTop()" title="Başa Dön"><i class="fa-solid fa-arrow-up"></i></button>
+    <button id="accessibilityBtn" class="float-btn" onclick="toggleAccessibility()" title="Erişilebilirlik Menüsü"><i class="fa-solid fa-universal-access"></i></button>
+</div>
+
+<div id="accessibilityPanel" class="accessibility-panel">
+    <div class="panel-header">
+        <h3>Erişilebilirlik (Renk Körü Modları)</h3>
+        <button class="close-panel-btn" onclick="toggleAccessibility()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="panel-body">
+        <div class="access-grid">
+            <button class="access-item" onclick="toggleHighContrast()"><i class="fa-solid fa-circle-half-stroke"></i><span>Yüksek Kontrast</span></button>
+            <button id="zoomBtn" class="access-item zoom-btn" data-level="0" onclick="cycleTextSize(this)"><i class="fa-solid fa-circle-check active-badge"></i><i class="fa-solid fa-magnifying-glass-plus"></i><span>Yakınlaştır</span><div class="level-bars"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></button>
+            <button class="access-item color-btn" onclick="setColorMode('protanopia', this)"><i class="fa-solid fa-eye-slash"></i><span>Kırmızı-Yeşil<br>(Protanopia)</span></button>
+            <button class="access-item color-btn" onclick="setColorMode('tritanopia', this)"><i class="fa-solid fa-droplet"></i><span>Mavi-Sarı<br>(Tritanopia)</span></button>
+            <button class="access-item color-btn" onclick="setColorMode('monochromacy', this)"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Renksiz<br>(Monochromacy)</span></button>
+            <button class="access-item color-btn active" onclick="setColorMode('standart', this)"><i class="fa-solid fa-eye"></i><span>Standart Mod<br>(Sıfırla)</span></button>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <defs>
+        <filter id="protanopia"><feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0"/></filter>
+        <filter id="tritanopia"><feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0"/></filter>
+    </defs>
+</svg>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
